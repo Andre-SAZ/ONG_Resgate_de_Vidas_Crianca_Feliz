@@ -1,2 +1,22 @@
 # ONG_Resgate_de_vidas-Crian-a_feliz
-Criação de site para a ONG Resgate de vidas - Criança feliz para a atividade de extensão 2.
+Regras para Criação (Focando em Responsividade e Acessibilidade)
+
+Utilizar HTML semântico (tags como <header>, <main>, <section>, <article>, <footer>)
+
+Garantir que todas as imagens tenham textos alternativos (atributo alt)
+
+Manter um contraste de cores adequado entre texto e fundo (padrão WCAG)
+
+Implementar design responsivo com Media Queries e unidades relativas (em, rem, %)
+
+Assegurar a navegabilidade total via teclado (foco visualmente claro)
+
+Utilizar títulos (h1-h6) em ordem lógica e hierárquica
+
+Fornecer rótulos claros para todos os campos de formulário (<label>)
+
+Garantir que o site seja compatível com leitores de tela (uso de ARIA roles quando necessário)
+
+Otimizar o tempo de carregamento e performance para conexões móveis
+
+Testar a interface em diferentes tamanhos de tela e dispositivos reais
