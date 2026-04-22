@@ -20,3 +20,4 @@ Garantir que o site seja compatível com leitores de tela (uso de ARIA roles qua
 Otimizar o tempo de carregamento e performance para conexões móveis
 
 Testar a interface em diferentes tamanhos de tela e dispositivos reais
+<img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/510e247c-7050-4d50-9447-1ca211afb5ff" />
