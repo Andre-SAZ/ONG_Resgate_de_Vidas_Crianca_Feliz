@@ -1,6 +1,6 @@
 <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/510e247c-7050-4d50-9447-1ca211afb5ff" />
-# ONG_Resgate_de_Vidas-Crianca_Feliz
-O **Projeto Resgate de Vidas** é uma organização social nascida em junho de 2020, a partir de uma ação de compaixão que se transformou em missão. Durante um dia comum, membros da igreja AD Verbo Vivo se depararam com uma cena marcante: uma criança em situação de extrema vulnerabilidade, tentando “cozinhar” pedras em uma churrasqueira improvisada com tijolos e galhos. Diante daquela realidade, ficou claro que não era possível permanecer indiferente. Foi assim que surgiu o projeto, com o propósito de levar esperança, dignidade e transformação de vida.
+<br>
+O Projeto Resgate de Vidas é uma organização social nascida em junho de 2020, a partir de uma ação de compaixão que se transformou em missão. Durante um dia comum, membros da igreja AD Verbo Vivo se depararam com uma cena marcante: uma criança em situação de extrema vulnerabilidade, tentando “cozinhar” pedras em uma churrasqueira improvisada com tijolos e galhos. Diante daquela realidade, ficou claro que não era possível permanecer indiferente. Foi assim que surgiu o projeto, com o propósito de levar esperança, dignidade e transformação de vida.
 
 A ONG atua nas áreas de **evangelização, alimentação e educação**, atendendo atualmente cerca de 260 crianças cadastradas, com uma média diária de 40 a 80 atendimentos. O público atendido tem entre 2 e 14 anos, e as atividades acontecem todos os dias, de segunda a domingo, das 09h30 às 15h30.
 
