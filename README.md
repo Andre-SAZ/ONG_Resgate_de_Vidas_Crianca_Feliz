@@ -1,7 +1,7 @@
 # ONG_Resgate_de_vidas-Crian-a_feliz
 Regras para Criação (Focando em Responsividade e Acessibilidade)
 
-Utilizar HTML semântico (tags como <header>, <main>, <section>, <article>, <footer>)
+Utilizar HTML semântico (tags como header, main, section, article, footer)
 
 Garantir que todas as imagens tenham textos alternativos (atributo alt)
 
