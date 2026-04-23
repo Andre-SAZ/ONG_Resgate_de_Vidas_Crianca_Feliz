@@ -1,4 +1,4 @@
-<p align=center><img width="350" height="350" alt="image" src="img/logo.png"/></p>
+<p align=center><img width="350" height="350" alt="image" src="script/img/logo.png"/></p>
 <br>
 O Projeto Resgate de Vidas é uma organização social nascida em junho de 2020, a partir de uma ação de compaixão que se transformou em missão. Durante um dia comum, membros da igreja AD Verbo Vivo se depararam com uma cena marcante: uma criança em situação de extrema vulnerabilidade, tentando “cozinhar” pedras em uma churrasqueira improvisada com tijolos e galhos. Diante daquela realidade, ficou claro que não era possível permanecer indiferente. Foi assim que surgiu o projeto, com o propósito de levar esperança, dignidade e transformação de vida.
 
