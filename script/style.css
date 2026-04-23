@@ -97,7 +97,7 @@ header {
         position: fixed;
         top: 0;
         right: -100%; /* Joga para fora da tela */
-        width: 60%;
+        width: 70%;
         height: 100vh;
         background-color: #7b0404;
         display: flex;
