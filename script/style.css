@@ -1,0 +1,51 @@
+/* Estilos básicos para o Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Empurra os itens para os extremos */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
+    padding: 1rem 5%;
+    /* Espaçamento interno */
+    background-color: #c1121f;
+    /* Cor de fundo leve */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tamanho da imagem/logo */
+.logo img {
+    height: 50px;
+    /* Ajuste conforme necessário */
+    width: auto;
+    display: block;
+}
+
+/* Estilo da lista de links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    /* Remove as bolinhas do menu */
+}
+
+.nav-links li {
+    margin-left: 20px;
+    /* Espaço entre os links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fdf0d5;
+    font-weight: bold;
+    padding-bottom: 4px;
+    /* Espaço entre o texto e a linha */
+    border-bottom: 2px solid transparent;
+    /* Linha invisível por padrão */
+    transition: border-color 0.5s ease;
+    /* Faz a transição ser suave */
+}
+
+.nav-links a:hover {
+    color: #780000;
+    /* Cor ao passar o mouse */
+    border-bottom: 2px solid #780000;
+}
