@@ -1,0 +1,85 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #7b0404;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li { margin-left: 20px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.5s ease;
+}
+
+.nav-links a:hover { border-bottom: 2px solid white; }
+
+.doar {
+    border: white 1.5px solid;
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+#menu-check, .hamburger, .mobile-only { display: none; }
+
+/* Responsividade do Menu */
+@media (max-width: 800px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .line {
+        width: 30px; height: 3px;
+        background-color: white;
+        transition: 0.4s;
+    }
+    .desktop-only { display: none; }
+    .mobile-only { display: block; margin-top: 20px; }
+
+    #secoes {
+        position: absolute;
+        top: 100%; right: 0;
+        width: auto; min-width: 200px;
+        height: auto;
+        background-color: #7b0404;
+        padding: 20px;
+        border-radius: 0 0 0 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    #menu-check:checked ~ #secoes {
+        opacity: 1; visibility: visible; transform: translateY(0);
+    }
+    
+    #menu-check:checked ~ .hamburger .line:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    #menu-check:checked ~ .hamburger .line:nth-child(2) { opacity: 0; }
+    #menu-check:checked ~ .hamburger .line:nth-child(3) { transform: rotate(-45deg) translate(5px, -7px); }
+
+    .nav-links { flex-direction: column; align-items: baseline; }
+    .nav-links li { margin: 10px 0; width: 100%; }
+}
