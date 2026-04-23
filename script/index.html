@@ -42,21 +42,51 @@
         </nav>
     </header>
 
-    <!--Seção da galeria-->
-        <section class="galeria-container">
-            <h2>Galeria</h2>
-            <div class="grid-galeria">
-                <img src="img/galeria/criança1.png" alt="Descrição 1" loading="lazy">
-                <img src="img/galeria/criança2.png" alt="Descrição 2" loading="lazy">
-                <img src="img/galeria/criança3.png" alt="Descrição 3" loading="lazy">
-                <img src="img/galeria/criança4.png" alt="Descrição 4" loading="lazy">
-                <img src="img/galeria/criança5.png" alt="Descrição 5" loading="lazy">
-                <img src="img/galeria/criança6.png" alt="Descrição 6" loading="lazy">
-                <img src="img/galeria/criança7.png" alt="Descrição 7" loading="lazy">
-                <img src="img/galeria/criança8.png" alt="Descrição 8" loading="lazy">
-                <img src="img/galeria/criança9.png" alt="Descrição 9" loading="lazy">
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <div class="slide first">
+                <img src="img/1.png" alt="Slide 1">
             </div>
-        </section>
+            <div class="slide">
+                <img src="img/2.png" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="img/3.png" alt="Slide 3">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+
+    <!--Seção da galeria-->
+    <section class="galeria-container">
+        <h2>Galeria</h2>
+        <div class="grid-galeria">
+            <img src="img/galeria/criança1.png" alt="Descrição 1" loading="lazy">
+            <img src="img/galeria/criança2.png" alt="Descrição 2" loading="lazy">
+            <img src="img/galeria/criança3.png" alt="Descrição 3" loading="lazy">
+            <img src="img/galeria/criança4.png" alt="Descrição 4" loading="lazy">
+            <img src="img/galeria/criança5.png" alt="Descrição 5" loading="lazy">
+            <img src="img/galeria/criança6.png" alt="Descrição 6" loading="lazy">
+            <img src="img/galeria/criança7.png" alt="Descrição 7" loading="lazy">
+            <img src="img/galeria/criança8.png" alt="Descrição 8" loading="lazy">
+            <img src="img/galeria/criança9.png" alt="Descrição 9" loading="lazy">
+        </div>
+    </section>
 
 </body>
 

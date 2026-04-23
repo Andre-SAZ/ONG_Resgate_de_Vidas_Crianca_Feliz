@@ -59,17 +59,88 @@ header {
 
 .doar {
     border: white 1.5px solid;
-    border-radius:  30px;
+    border-radius: 30px;
     padding: 5px 10px;
 }
 
 /* Esconder o checkbox e o ícone no desktop */
-#menu-check, .hamburger {
+#menu-check,
+.hamburger {
     display: none;
 }
 
 .mobile-only {
     display: none;
+}
+
+.slider {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.8s ease;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.first {
+    transition: 0.8s ease;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.manual-btn:hover {
+    background: #fff;
+}
+
+#radio1:checked~.navigation-manual .manual-btn:nth-child(1),
+#radio2:checked~.navigation-manual .manual-btn:nth-child(2),
+#radio3:checked~.navigation-manual .manual-btn:nth-child(3) {
+    background: #fff;
 }
 
 /* --- MEDIA QUERY PARA TELAS < 784px --- */
@@ -90,31 +161,45 @@ header {
     }
 
     /* Esconde o botão de doação original e mostra o dentro do menu */
-    .desktop-only { display: none; }
-    .mobile-only { display: block; margin-top: 20px; }
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 20px;
+    }
 
     /* Estilização do Menu Lateral (Escondido por padrão) */
     #secoes {
-        position: absolute;   /* Flutua em relação ao header */
-        top: 100%;            /* Começa exatamente onde o header termina */
-        right: 0;             /* Alinha na direita */
-        width: auto;          /* Ocupa apenas o necessário */
-        min-width: 200px;     /* Mas define um mínimo para não ficar esmagado */
-        height: auto;         /* Altura cresce conforme o número de itens */
+        position: absolute;
+        /* Flutua em relação ao header */
+        top: 100%;
+        /* Começa exatamente onde o header termina */
+        right: 0;
+        /* Alinha na direita */
+        width: auto;
+        /* Ocupa apenas o necessário */
+        min-width: 200px;
+        /* Mas define um mínimo para não ficar esmagado */
+        height: auto;
+        /* Altura cresce conforme o número de itens */
         background-color: #7b0404;
         padding: 20px;
-        border-radius: 0 0 0 10px; /* Arredonda só o cantinho inferior esquerdo */
-        
+        border-radius: 0 0 0 10px;
+        /* Arredonda só o cantinho inferior esquerdo */
+
         /* Esconder e Transição */
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-10px); /* Começa um pouquinho para cima */
+        transform: translateY(-10px);
+        /* Começa um pouquinho para cima */
         transition: all 0.3s ease;
         z-index: 1000;
     }
 
     /* Quando clicar, ele aparece e "desce" suavemente */
-    #menu-check:checked ~ #secoes {
+    #menu-check:checked~#secoes {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -122,34 +207,38 @@ header {
 
     .nav-links {
         flex-direction: column;
-        align-items: baseline; /* Alinha os textos à esquerda */
+        align-items: baseline;
+        /* Alinha os textos à esquerda */
     }
 
     .nav-links li {
         margin: 10px 0;
-        width: 100%; /* Garante que o link ocupe a largura do menu */
+        width: 100%;
+        /* Garante que o link ocupe a largura do menu */
     }
 
     /* Quando clicar no hambúrguer, o menu entra na tela */
-    #menu-check:checked ~ #secoes {
+    #menu-check:checked~#secoes {
         right: 0;
     }
 
     /* Animação do Hambúrguer virando X */
-    #menu-check:checked ~ .hamburger .line:nth-child(1) {
+    #menu-check:checked~.hamburger .line:nth-child(1) {
         transform: rotate(45deg) translate(5px, 6px);
     }
-    #menu-check:checked ~ .hamburger .line:nth-child(2) {
+
+    #menu-check:checked~.hamburger .line:nth-child(2) {
         opacity: 0;
     }
-    #menu-check:checked ~ .hamburger .line:nth-child(3) {
+
+    #menu-check:checked~.hamburger .line:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -7px);
     }
 
     .grid-galeria {
-    /* Em telas menores, passa para 2 colunas */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+        /* Em telas menores, passa para 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
 
@@ -167,17 +256,19 @@ header {
 .grid-galeria {
     display: grid;
     /* Cria 3 colunas de tamanhos iguais */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     /* Espaçamento entre as imagens */
-    gap: 20px; 
+    gap: 20px;
 }
 
 .grid-galeria img {
     width: 100%;
-    height: 250px; /* Altura fixa para manter a simetria */
-    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+    height: 250px;
+    /* Altura fixa para manter a simetria */
+    object-fit: cover;
+    /* Corta a imagem para preencher o espaço sem distorcer */
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #e0e0e0;
     transition: transform 0.3s ease;
 }
