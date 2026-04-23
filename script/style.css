@@ -45,7 +45,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #780000;
+    color: #fdf0d5;
     /* Cor ao passar o mouse */
-    border-bottom: 2px solid #780000;
+    border-bottom: 2px solid #fdf0d5;
 }
