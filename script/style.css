@@ -143,6 +143,91 @@ header {
     background: #fff;
 }
 
+.sobre-nos-container {
+    width: 100%;
+    min-height: 80vh; /* Faz a seção ocupar 80% da altura da tela */
+    padding: 80px 10%;
+    
+    /* CAMINHO DA IMAGEM */
+    background-image: url('img/fundo.png'); 
+    
+    /* AJUSTES DE EXIBIÇÃO */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Mantém o fundo fixo ou rolável */
+
+    /* CENTRALIZAÇÃO TOTAL */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sobre-nos-container .content {
+    background-color: rgba(0, 0, 0, 0.6); /* Cria um fundo preto transparente atrás do texto */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 900px;
+}
+
+.sobre-nos-container h2 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sobre-nos-container .descricao {
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+}
+
+.galeria-container {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.galeria-container h2 {
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #7b0404;
+}
+
+.grid-galeria {
+    display: grid;
+    /* Cria 3 colunas de tamanhos iguais */
+    grid-template-columns: repeat(3, 1fr);
+    /* Espaçamento entre as imagens */
+    gap: 20px;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 250px;
+    /* Altura fixa para manter a simetria */
+    object-fit: cover;
+    /* Corta a imagem para preencher o espaço sem distorcer */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom ao passar o mouse */
+.grid-galeria img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 480px) {
+    .grid-galeria {
+        /* Em celulares pequenos, 1 coluna só */
+        grid-template-columns: 1fr;
+    }
+}
+
 /* --- MEDIA QUERY PARA TELAS < 784px --- */
 @media (max-width: 784px) {
     .hamburger {
@@ -240,47 +325,16 @@ header {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-}
 
-.galeria-container {
-    padding: 40px 5%;
-    text-align: center;
-}
+    .sobre-nos-container {
+        padding: 60px 5%; /* Menos padding no mobile */
+    }
 
-.galeria-container h2 {
-    margin-bottom: 30px;
-    font-family: 'Poppins', sans-serif;
-    color: #7b0404;
-}
+    .sobre-nos-container h2 {
+        font-size: 2rem;
+    }
 
-.grid-galeria {
-    display: grid;
-    /* Cria 3 colunas de tamanhos iguais */
-    grid-template-columns: repeat(3, 1fr);
-    /* Espaçamento entre as imagens */
-    gap: 20px;
-}
-
-.grid-galeria img {
-    width: 100%;
-    height: 250px;
-    /* Altura fixa para manter a simetria */
-    object-fit: cover;
-    /* Corta a imagem para preencher o espaço sem distorcer */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #e0e0e0;
-    transition: transform 0.3s ease;
-}
-
-/* Efeito de zoom ao passar o mouse */
-.grid-galeria img:hover {
-    transform: scale(1.03);
-}
-
-@media (max-width: 480px) {
-    .grid-galeria {
-        /* Em celulares pequenos, 1 coluna só */
-        grid-template-columns: 1fr;
+    .sobre-nos-container .descricao {
+        font-size: 1rem;
     }
 }
