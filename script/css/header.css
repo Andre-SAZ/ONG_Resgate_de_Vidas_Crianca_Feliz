@@ -5,7 +5,13 @@ header {
     padding: 1rem 5%;
     background-color: #7b0404;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
+    
+    /* Alterações para deixar o menu sempre na tela: */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que ele fique por cima da galeria e do slider */
 }
 
 /* Container da Logo */
