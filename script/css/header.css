@@ -12,14 +12,19 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px; 
 }
 
-/* Imagem dominante */
 .logo img {
-    height: 65px; /* Altura maior para destaque */
+    height: 90px; 
     width: auto;
-    flex-shrink: 0; /* Impede a imagem de encolher */
+    flex-shrink: 0;
+    
+    /* O SEGREDO: */
+    margin-bottom: -20px; 
+    margin-top: -10px;
+    position: relative;
+    z-index: 10; 
 }
 
 /* Texto como complemento */
@@ -28,9 +33,9 @@ header {
     flex-direction: column;
     justify-content: center;
     color: white;
-    border-left: 2px solid rgba(255, 255, 255, 0.3); /* Linha sutil separando da imagem */
-    padding-left: 12px;
-    line-height: 1.2;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    padding-left: 10px; /* Um pouco menos de espaço após a linha */
+    line-height: 1.1;
 }
 
 .logo-text .titulo {
@@ -76,7 +81,7 @@ header {
 @media (max-width: 800px) {
 
     .logo img {
-        height: 50px; /* Diminui um pouco no mobile para caber tudo */
+        height: 70px; /* Diminui um pouco no mobile para caber tudo */
     }
 
     .logo-text .titulo {
