@@ -12,3 +12,8 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px; /* Ajuste esse valor para a altura exata do seu cabeçalho */
 }
+
+body {
+    /* Se o seu header tem uns 80px de altura, use esse valor */
+    padding-top: 80px; 
+}
