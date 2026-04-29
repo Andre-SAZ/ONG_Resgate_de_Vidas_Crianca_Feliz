@@ -29,3 +29,7 @@
 #radio3:checked~.navigation-manual .manual-btn:nth-child(3) {
     background: #fff;
 }
+
+.slider {
+    margin-top: 80px; /* Ajuste este valor até que a imagem apareça inteira */
+}
