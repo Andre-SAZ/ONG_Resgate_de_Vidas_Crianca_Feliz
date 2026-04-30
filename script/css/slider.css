@@ -23,6 +23,18 @@
     padding: 6px; border-radius: 50%;
     cursor: pointer; margin: 0 10px; transition: 0.3s;
 }
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    /* É AQUI QUE VOCÊ SOBE AS BOLINHAS */
+    bottom: 35px; /* Vá aumentando esse número (ex: 80px, 100px) até ficar na altura ideal */
+    z-index: 10; /* Garante que as bolinhas fiquem clicáveis por cima da foto */
+}
+
 .manual-btn:hover, 
 #radio1:checked~.navigation-manual .manual-btn:nth-child(1),
 #radio2:checked~.navigation-manual .manual-btn:nth-child(2),
@@ -31,5 +43,5 @@
 }
 
 .slider {
-    margin-top: 30px; /* Ajuste este valor até que a imagem apareça inteira */
+    margin-top: 50px; /* Ajuste este valor até que a imagem apareça inteira */
 }
