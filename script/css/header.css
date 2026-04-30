@@ -11,26 +11,24 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Garante que ele fique por cima da galeria e do slider */
+    z-index: 1000; 
 }
 
 /* Container da Logo */
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px; /* Diminuído para aproximar a imagem do texto */
+    gap: 8px; 
 }
 
 .logo img {
-    height: 90px; /* Aumentei para destaque */
+    height: 90px; 
     width: auto;
     flex-shrink: 0;
-    
-    /* O SEGREDO: */
-    margin-bottom: -20px; /* Faz a imagem "sobrar" para baixo sem esticar o header */
-    margin-top: -10px;    /* Ajusta para ela subir um pouco se necessário */
+    margin-bottom: -20px;
+    margin-top: -10px;
     position: relative;
-    z-index: 10; /* Garante que ela fique por cima do slider abaixo */
+    z-index: 10; 
 }
 
 /* Texto como complemento */
@@ -39,12 +37,12 @@ header {
     flex-direction: column;
     justify-content: center;
     color: white;
-    padding-left: 10px; /* Um pouco menos de espaço após a linha */
+    padding-left: 10px; 
     line-height: 1.1;
 }
 
 .logo-text .titulo {
-    font-size: 1.1rem; /* Texto menor que a imagem */
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -53,7 +51,7 @@ header {
 .logo-text .subtitulo {
     font-size: 0.85rem;
     font-weight: 400;
-    opacity: 0.9; /* Deixa o subtítulo levemente mais suave */
+    opacity: 0.9; 
 }
 
 .nav-links {
@@ -87,7 +85,7 @@ header {
 
     .logo img {
         height: 60px; 
-        margin-bottom: -10px; /* Menor no mobile */
+        margin-bottom: -10px;
         margin-top: 0;
     }
 
@@ -142,10 +140,9 @@ header {
 }
 
 @media (max-width: 480px) {
-    /* Em telas muito pequenas, o texto pode sumir para focar na logo 
-       ou apenas diminuir mais para não empurrar o menu */
+
     .logo-text {
-        display: flex; /* Mantenha 'none' se preferir esconder em celulares mini */
+        display: flex; 
     }
     
     .logo {
