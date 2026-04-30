@@ -3,7 +3,10 @@
     margin: auto;
     overflow: hidden;
     position: relative;
+    touch-action: pan-y;
+    margin-top: 80px;
 }
+
 .slides { display: flex; width: 500%; }
 .slides input { display: none; }
 .slide { width: 20%; transition: 0.8s ease; }
@@ -15,24 +18,18 @@
 
 .navigation-manual {
     position: absolute;
-    width: 100%; bottom: 20px;
-    display: flex; justify-content: center; left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 35px; 
+    z-index: 10;
 }
+
 .manual-btn {
     border: 2px solid #fff;
     padding: 6px; border-radius: 50%;
     cursor: pointer; margin: 0 10px; transition: 0.3s;
-}
-
-.navigation-manual {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
-    /* É AQUI QUE VOCÊ SOBE AS BOLINHAS */
-    bottom: 35px; /* Vá aumentando esse número (ex: 80px, 100px) até ficar na altura ideal */
-    z-index: 10; /* Garante que as bolinhas fiquem clicáveis por cima da foto */
 }
 
 .manual-btn:hover, 
@@ -42,6 +39,9 @@
     background: #fff;
 }
 
-.slider {
-    margin-top: 80px; /* Ajuste este valor até que a imagem apareça inteira */
+@media screen and (max-width: 768px) {
+    .navigation-manual, 
+    .navigation-auto {
+        display: none;
+    }
 }
