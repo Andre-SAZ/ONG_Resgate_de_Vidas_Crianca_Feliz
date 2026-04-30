@@ -5,26 +5,32 @@ header {
     padding: 1rem 5%;
     background-color: #7b0404;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
+    
+    /* Alterações para deixar o menu sempre na tela: */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que ele fique por cima da galeria e do slider */
 }
 
 /* Container da Logo */
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 8px; /* Diminuído para aproximar a imagem do texto */
 }
 
 .logo img {
-    height: 90px; 
+    height: 90px; /* Aumentei para destaque */
     width: auto;
     flex-shrink: 0;
     
     /* O SEGREDO: */
-    margin-bottom: -20px; 
-    margin-top: -10px;
+    margin-bottom: -20px; /* Faz a imagem "sobrar" para baixo sem esticar o header */
+    margin-top: -10px;    /* Ajusta para ela subir um pouco se necessário */
     position: relative;
-    z-index: 10; 
+    z-index: 10; /* Garante que ela fique por cima do slider abaixo */
 }
 
 /* Texto como complemento */
@@ -33,7 +39,6 @@ header {
     flex-direction: column;
     justify-content: center;
     color: white;
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
     padding-left: 10px; /* Um pouco menos de espaço após a linha */
     line-height: 1.1;
 }
@@ -81,7 +86,9 @@ header {
 @media (max-width: 800px) {
 
     .logo img {
-        height: 70px; /* Diminui um pouco no mobile para caber tudo */
+        height: 60px; 
+        margin-bottom: -10px; /* Menor no mobile */
+        margin-top: 0;
     }
 
     .logo-text .titulo {
