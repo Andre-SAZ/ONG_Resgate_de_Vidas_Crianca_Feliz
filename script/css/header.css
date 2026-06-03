@@ -27,7 +27,7 @@
 }
 
 .logo img {
-    height: 75px; /* Ajuste conforme a necessidade da logo */
+    height: 65px; /* Ajuste conforme a necessidade da logo */
     width: auto;
 }
 
@@ -46,14 +46,13 @@
 }
 
 .logo-text .titulo {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .logo-text .subtitulo {
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     font-weight: 400;
     opacity: 0.9; 
     text-transform: uppercase;

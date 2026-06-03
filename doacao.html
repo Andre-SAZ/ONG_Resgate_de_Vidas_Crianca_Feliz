@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="script/css/base.css">
     <link rel="stylesheet" href="script/css/header.css">
     <link rel="stylesheet" href="script/css/footer.css">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,17 +19,21 @@
 
     <style>
         .doacao-main {
-            padding: 150px 20px 80px 20px; /* Espaço para o header fixo */
+            padding: 150px 20px 80px 20px;
+            /* Espaço para o header fixo */
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
         }
+
         .doacao-header h2 {
-            font-family: 'Sorts Mill Goudy', serif;
+            font-family: Goudy;
             font-size: 2.5rem;
             color: #333;
             margin-bottom: 15px;
+            letter-spacing: 0.5px;
         }
+
         .doacao-header p {
             font-family: 'Poppins', sans-serif;
             font-size: 1.1rem;
@@ -37,39 +41,48 @@
             max-width: 800px;
             margin: 0 auto 50px auto;
         }
+
         .grid-pagamentos {
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
             justify-content: center;
         }
+
         .card-pagamento {
             background: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             padding: 40px 30px;
             width: 100%;
             max-width: 450px;
             text-align: center;
-            border-top: 5px solid #FFD700; /* Detalhe amarelo combinando com a barra do footer */
+            border-top: 5px solid #FFD700;
+            /* Detalhe amarelo combinando com a barra do footer */
         }
+
         .card-pagamento h3 {
             font-family: 'Poppins', sans-serif;
             color: #222;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
+
         .qr-code-box {
+            display: flex;
             background: #f9f9f9;
             padding: 20px;
             border-radius: 8px;
             margin: 20px 0;
             border: 1px dashed #ccc;
+            justify-content: center;
         }
+
         .qr-code-box img {
-            max-width: 200px;
+            max-width: auto;
             height: auto;
         }
+
         .chave-pix {
             font-family: monospace;
             background: #eee;
@@ -79,6 +92,7 @@
             word-break: break-all;
             margin-bottom: 15px;
         }
+
         .btn-copiar {
             background: #28a745;
             color: white;
@@ -90,18 +104,22 @@
             font-weight: 600;
             transition: 0.3s;
         }
+
         .btn-copiar:hover {
             background: #218838;
         }
+
         .dados-bancarios {
             text-align: left;
             font-family: 'Poppins', sans-serif;
             color: #444;
             line-height: 1.6;
         }
+
         .dados-bancarios strong {
             color: #222;
         }
+
         .divisor {
             margin: 20px 0;
             border: 0;
@@ -116,7 +134,8 @@
 
     <header class="main-header">
         <div class="logo">
-            <img src="img/logo.png" alt="Logo ONG Resgate de Vidas">
+            <a href="index.html" class="btn-logo">
+                <img src="img/logo.png" alt="Logo ONG Resgate de Vidas"></a>
             <div class="logo-text">
                 <h1><span class="titulo">Resgate de vidas</span></h1>
                 <span class="subtitulo">criança feliz</span>
@@ -146,40 +165,42 @@
         <section class="doacao-main">
             <div class="doacao-header" data-aos="fade-up">
                 <h2 tabindex="0">Transforme Vidas Hoje</h2>
-                <p tabindex="0">A sua contribuição é o que mantém o nosso projeto vivo. Escolha a melhor forma de fazer a sua doação e nos ajude a construir um futuro melhor para centenas de crianças.</p>
+                <p tabindex="0">A sua contribuição é o que mantém o nosso projeto vivo. Escolha a melhor forma de fazer
+                    a sua doação e nos ajude a construir um futuro melhor para centenas de crianças.</p>
             </div>
 
             <div class="grid-pagamentos">
-                
+
                 <div class="card-pagamento" data-aos="zoom-in" data-aos-delay="200" tabindex="0">
                     <h3>Doação via PIX</h3>
                     <p>Rápido, seguro e cai na hora.</p>
-                    
+
                     <div class="qr-code-box">
                         <img src="img/qrcode-pix.png" alt="QR Code para doação via PIX">
                     </div>
-                    
+
                     <p>Ou utilize nossa chave:</p>
                     <div class="chave-pix" id="chavePixTexto">resgatedevidasbr@gmail.com</div>
-                    
+
                     <button class="btn-copiar" onclick="copiarPix()">Copiar Chave PIX</button>
+                    
                 </div>
 
                 <div class="card-pagamento" data-aos="zoom-in" data-aos-delay="400" tabindex="0">
                     <h3>Outras Formas de Doar</h3>
-                    
+
                     <div class="dados-bancarios">
                         <h4>Transferência Bancária</h4>
                         <p>
-                            <strong>Banco:</strong> (Nome do Banco) - 000<br>
-                            <strong>Agência:</strong> 0000<br>
-                            <strong>Conta Corrente:</strong> 00000-0<br>
-                            <strong>CNPJ:</strong> 00.000.000/0000-00<br>
+                            <strong>Banco:</strong> Santander <br>
+                            <strong>Agência:</strong> 2976<br>
+                            <strong>Conta Corrente:</strong> 03053594-3<br>
+                            <strong>CNPJ:</strong> 47.251.468/0001-12<br>
                             <strong>Favorecido:</strong> Projeto Resgate de Vidas
                         </p>
-                        
+
                         <hr class="divisor">
-                        
+
                         <h4>Doações Internacionais (EUA)</h4>
                         <p>
                             <strong>Bright Future Foundation</strong><br>
@@ -201,7 +222,8 @@
         <div class="footer-container" data-aos="fade-up">
             <div class="footer-info">
                 <h2 tabindex="0" class="footer-title">FALE COM A GENTE!</h2>
-                <p class="footer-desc">Juntos levaremos oportunidades para milhares de vidas de crianças e suas famílias.</p>
+                <p class="footer-desc">Juntos levaremos oportunidades para milhares de vidas de crianças e suas
+                    famílias.</p>
                 <div class="yellow-bar"></div>
 
                 <div class="contact-details">
@@ -277,16 +299,42 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, offset: 100 });
-        
-        // Script simples para copiar a chave PIX
-        function copiarPix() {
-            var textoCopia = document.getElementById("chavePixTexto").innerText;
-            navigator.clipboard.writeText(textoCopia).then(function() {
-                alert("Chave PIX copiada com sucesso!");
-            }, function(err) {
-                alert("Erro ao copiar. Tente selecionar o texto manualmente.");
+
+        // 1. Selecionamos o botão e a div que contém a chave PIX
+        const btnCopiar = document.querySelector('.btn-copiar');
+        const chavePixElemento = document.getElementById('chavePixTexto');
+
+        // 2. Adicionamos o evento de clique no botão
+        btnCopiar.addEventListener('click', () => {
+            // Pegamos o texto que está dentro da div
+            const textoParaCopiar = chavePixElemento.innerText;
+
+            // Usamos a API do navegador para copiar o texto
+            navigator.clipboard.writeText(textoParaCopiar)
+                .then(() => {
+                    // O que acontece se der certo:
+                    alert('Chave PIX copiada com sucesso!');
+                })
+                .catch((erro) => {
+                    // O que acontece se der erro (por segurança):
+                    console.error('Falha ao copiar: ', erro);
+                    alert('Erro ao copiar a chave.');
+                });
+        });
+
+        btnCopiar.addEventListener('click', () => {
+            const textoParaCopiar = chavePixElemento.innerText;
+
+            navigator.clipboard.writeText(textoParaCopiar).then(() => {
+                // Muda o texto do botão
+                btnCopiar.innerText = 'Copiado!';
+
+                // Volta ao texto original depois de 2 segundos
+                setTimeout(() => {
+                    btnCopiar.innerText = 'Copiar Chave PIX';
+                }, 2000);
             });
-        }
+        });
     </script>
     <script src="script/js/scripts.js"></script>
 
@@ -304,4 +352,5 @@
     <script src="https://cdn.userway.org/widget.js" data-account="Y5OvFyECWY" data-position="5"></script>
 
 </body>
+
 </html>
