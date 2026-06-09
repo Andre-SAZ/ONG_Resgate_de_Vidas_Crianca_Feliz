@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
-
+    <link rel="shortcut icon" href="img/nossa-historia.png" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Faça sua Doação - Resgate de Vidas</title>
@@ -125,6 +125,148 @@
             border: 0;
             border-top: 1px solid #eee;
         }
+
+        .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background-color: #28a745;
+    color: white;
+
+    padding: 14px 20px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    transition: all 0.3s ease;
+
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* --- Seção de Explicação na Tela de Doação --- */
+.explicacao-doacao-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.explicacao-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #EFEBE4;
+}
+
+.explicacao-icone {
+    font-size: 3rem;
+    color: #A31D1D;
+    margin-bottom: 20px;
+}
+
+.explicacao-card h2 {
+    color: #4A0E0E;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.texto-emocional {
+    color: #555555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Bloco do Selo Interno */
+.selo-transparencia {
+    background-color: #FFFDF9; /* Fundo off-white sutil */
+    border-left: 4px solid #2E7D32; /* Barra lateral verde (transmite segurança/sucesso) */
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.selo-icone {
+    font-size: 2.2rem;
+    color: #2E7D32;
+}
+
+.selo-texto h3 {
+    color: #4A0E0E;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.selo-texto p {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Botão de Link para a outra página */
+.btn-conferir-gastos {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #4A0E0E;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 14, 14, 0.15);
+}
+
+.btn-conferir-gastos:hover {
+    background-color: #A31D1D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(163, 29, 29, 0.25);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 576px) {
+    .explicacao-card {
+        padding: 30px 20px;
+    }
+    .explicacao-card h2 {
+        font-size: 1.6rem;
+    }
+    .selo-transparencia {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .btn-conferir-gastos {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.95rem;
+    }
+}
+
     </style>
 </head>
 
@@ -163,6 +305,35 @@
 
     <main id="conteudo-principal" tabindex="-1" style="outline: none;">
         <section class="doacao-main">
+                                <section class="explicacao-doacao-container">
+    <div class="explicacao-card">
+        <div class="explicacao-icone">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        
+        <h2>Para onde vai a sua doação?</h2>
+        
+        <p class="texto-emocional">
+            No <strong>Projeto Infantil Resgate de Vidas</strong>, acreditamos que a transformação social só acontece com seriedade e respeito. Cada contribuição que recebemos é convertida diretamente em refeições nutritivas, fraldas, atendimento pedagógico e um ambiente seguro para as nossas crianças em Itapetininga/SP.
+        </p>
+
+        <div class="Selo-transparencia">
+            <div class="selo-icone">
+                <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <div class="selo-texto">
+                <h3>Compromisso com a Transparência</h3>
+                <p>Nós prestamos contas de cada centavo arrecadado. Todas as compras de alimentos, materiais pedagógicos e custos operacionais são auditados e abertos ao público.</p>
+                <br>
+            </div>
+        </div>
+
+        <a href="transparencia.html" class="btn-conferir-gastos">
+            <i class="fa-solid fa-receipt"></i> Conferir Prestação de Contas (Maio/2026)
+        </a>
+    </div>
+</section>
+
             <div class="doacao-header" data-aos="fade-up">
                 <h2 tabindex="0">Transforme Vidas Hoje</h2>
                 <p tabindex="0">A sua contribuição é o que mantém o nosso projeto vivo. Escolha a melhor forma de fazer
@@ -264,6 +435,9 @@
             </div>
         </div>
 
+
+
+
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <div class="footer-logo">
@@ -296,45 +470,43 @@
         </div>
     </footer>
 
+    <div id="toast" class="toast">
+    ✓ Chave PIX copiada com sucesso!
+</div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, offset: 100 });
 
-        // 1. Selecionamos o botão e a div que contém a chave PIX
-        const btnCopiar = document.querySelector('.btn-copiar');
-        const chavePixElemento = document.getElementById('chavePixTexto');
+const btnCopiar = document.querySelector('.btn-copiar');
+const chavePixElemento = document.getElementById('chavePixTexto');
+const toast = document.getElementById('toast');
 
-        // 2. Adicionamos o evento de clique no botão
-        btnCopiar.addEventListener('click', () => {
-            // Pegamos o texto que está dentro da div
-            const textoParaCopiar = chavePixElemento.innerText;
+btnCopiar.addEventListener('click', () => {
+    const textoParaCopiar = chavePixElemento.innerText;
 
-            // Usamos a API do navegador para copiar o texto
-            navigator.clipboard.writeText(textoParaCopiar)
-                .then(() => {
-                    // O que acontece se der certo:
-                    alert('Chave PIX copiada com sucesso!');
-                })
-                .catch((erro) => {
-                    // O que acontece se der erro (por segurança):
-                    console.error('Falha ao copiar: ', erro);
-                    alert('Erro ao copiar a chave.');
-                });
+    navigator.clipboard.writeText(textoParaCopiar)
+        .then(() => {
+
+            // Toast
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+
+            // Texto do botão
+            btnCopiar.innerText = 'Copiado!';
+
+            setTimeout(() => {
+                btnCopiar.innerText = 'Copiar Chave PIX';
+            }, 2000);
+
+        })
+        .catch((erro) => {
+            console.error('Falha ao copiar:', erro);
         });
-
-        btnCopiar.addEventListener('click', () => {
-            const textoParaCopiar = chavePixElemento.innerText;
-
-            navigator.clipboard.writeText(textoParaCopiar).then(() => {
-                // Muda o texto do botão
-                btnCopiar.innerText = 'Copiado!';
-
-                // Volta ao texto original depois de 2 segundos
-                setTimeout(() => {
-                    btnCopiar.innerText = 'Copiar Chave PIX';
-                }, 2000);
-            });
-        });
+});
     </script>
     <script src="script/js/scripts.js"></script>
 

@@ -1,22 +1,136 @@
-.galeria-container { padding: 40px 5%; text-align: center; }
-.galeria-container h2 { margin-bottom: 30px; color: #7b0404; }
-.grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+/* --- Container Geral e Cabeçalho --- */
+.galeria-container {
+    background-color: #FFFDF9;
+    padding: 80px 20px;
+    text-align: center;
 }
-.grid-galeria img {
-    width: 100%; height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-.grid-galeria img:hover { transform: scale(1.03); }
 
-@media (max-width: 800px) {
-    .grid-galeria { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.galeria-header {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
 }
-@media (max-width: 480px) {
-    .grid-galeria { grid-template-columns: 1fr; }
+
+.coracao-divisao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #A31D1D;
+    margin-bottom: 15px;
+}
+
+.coracao-divisao .linha {
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background-color: #A31D1D;
+    opacity: 0.3;
+}
+
+.galeria-titulo {
+    color: #4A0E0E;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.galeria-subtitulo {
+    color: #E25E5E;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.galeria-descricao {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Botões de Filtro --- */
+.galeria-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    border: none;
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro.active {
+    background-color: #4A0E0E;
+    color: #ffffff;
+}
+
+/* --- Grid Uniforme (Tamanhos Iguais) --- */
+.grid-galeria-uniforme {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas idênticas */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    aspect-ratio: 4 / 3; /* Define uma proporção retangular fixa para todos os blocos */
+    width: 100%;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Classes de Controle do Filtro --- */
+.galeria-item.hide {
+    display: none !important; /* Esconde e remove do fluxo para reorganizar a grade */
+}
+
+.galeria-item.show {
+    display: block !important;
+    animation: galeriaFadeIn 0.4s ease forwards;
+}
+
+@keyframes galeriaFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+    .grid-galeria-uniforme {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-galeria-uniforme {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
 }

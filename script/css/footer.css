@@ -105,6 +105,7 @@ textarea {
     cursor: pointer;
     width: fit-content;
     transition: transform 0.2s;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-submit:hover {
