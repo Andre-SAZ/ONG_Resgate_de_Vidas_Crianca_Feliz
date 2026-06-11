@@ -80,7 +80,7 @@
 /* --- Grid Uniforme (Tamanhos Iguais) --- */
 .grid-galeria-uniforme {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas idênticas */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas idênticas no PC */
     gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
@@ -91,7 +91,7 @@
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    aspect-ratio: 4 / 3; /* Define uma proporção retangular fixa para todos os blocos */
+    aspect-ratio: 4 / 3;
     width: 100%;
 }
 
@@ -100,6 +100,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    transition: transform 0.3s ease;
 }
 
 .galeria-item:hover img {
@@ -108,7 +109,7 @@
 
 /* --- Classes de Controle do Filtro --- */
 .galeria-item.hide {
-    display: none !important; /* Esconde e remove do fluxo para reorganizar a grade */
+    display: none !important;
 }
 
 .galeria-item.show {
@@ -121,7 +122,7 @@
     to { opacity: 1; transform: scale(1); }
 }
 
-/* --- Responsividade --- */
+/* --- Responsividade Correta --- */
 @media (max-width: 992px) {
     .grid-galeria-uniforme {
         grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
@@ -131,6 +132,24 @@
 
 @media (max-width: 576px) {
     .grid-galeria-uniforme {
-        grid-template-columns: 1fr; /* 1 coluna em celulares */
+        grid-template-columns: 1fr; /* 1 coluna em telemóveis */
+    }
+    
+    /* Filtros arrastáveis no mobile para não ocupar muita altura */
+    .galeria-filtros {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .galeria-filtros::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .btn-filtro {
+        flex-shrink: 0; /* Impede que os botões fiquem esmagados */
     }
 }

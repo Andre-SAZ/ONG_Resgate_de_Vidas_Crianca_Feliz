@@ -140,33 +140,57 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #7b0404;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         
-        /* Estado oculto */
+        /* Efeito Vidro Fosco (Frosted Glass) */
+        background-color: rgba(123, 4, 4, 0.95); 
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        border-radius: 0 0 25px 25px; /* Arredonda as pontas de baixo */
+        
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Animação mais suave */
     }
 
-    /* Classe ativada pelo seu arquivo JavaScript (header.js) */
     .nav-menu.active {
-        max-height: 500px; /* Expande o menu suavemente */
+        max-height: 600px; /* Aumentado um pouco para caber os itens todos confortavelmente */
     }
 
     .nav-links { 
         flex-direction: column; 
         align-items: center; 
-        padding: 20px 0;
-        gap: 20px;
+        padding: 20px 30px 40px 30px; /* Espaçamento interno */
+        gap: 0; /* Removemos o gap para colocar linhas divisórias */
     }
     
-    .nav-links a {
-        font-size: 1.1rem;
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória subtil */
     }
 
-    .item-doar {
-        margin-top: 10px;
+    .nav-links li:last-child {
+        border-bottom: none; /* O último item (botão) não tem linha */
+        margin-top: 20px;
+    }
+
+    .nav-links a {
+        font-size: 1.15rem;
+        display: block;
+        padding: 18px 0; /* Maior área de clique para os dedos */
+        width: 100%;
+        letter-spacing: 0.5px;
+    }
+
+    /* Botão de Doação no Mobile (mais chamativo) */
+    .btn-doar {
+        background-color: white !important;
+        color: #7b0404 !important;
+        font-weight: 700;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        padding: 12px 0 !important;
     }
 
     /* Animação do Ícone Hamburguer virando X */
